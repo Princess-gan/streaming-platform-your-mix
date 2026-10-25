@@ -31,7 +31,7 @@ The concept grew from a self-initiated demo I presented to my team during my tim
 **Home → Your Mix → Familiar favorites → New contexts → Choose a title**
 
 1. **Enter from the homepage.** Your Mix appears in the discovery section above the continue-watching shelf, with a familiar Modern Family cover and one clear entry action.
-2. **Start watching without a questionnaire.** A brief cover leads into a muted embedded preview. Viewers can pause or move on; host voice is optional and off by default.
+2. **Start watching without a questionnaire.** The cover stays visible until clicked; only then does the muted embedded preview load. Viewers can pause or move on; host voice is optional and off by default.
 3. **Understand why it is here.** Each title gets a clear category heading and one short explanation, with important context such as a friend's name emphasized.
 4. **Move between contexts.** Short category transitions connect the sequence. Each preview has a 45-second playing-time budget; loading and buffering may add time.
 5. **Choose the full-length experience.** Equal-sized primary and Next buttons make the decision clear. Resume episode, Watch movie, and Watch series distinguish choosing a title from watching its preview.
@@ -69,9 +69,9 @@ These are proposed tests, not completed research or reported results.
 
 First, run moderated usability sessions to learn whether viewers understand each recommendation, distinguish preview playback from title selection, and can find pause and Next without explanation. Then compare the existing browse experience with Your Mix in an instrumented pilot.
 
-**Primary outcome:** time from discovery entry to a satisfying full-title choice. In this prototype, title selection is only a proxy; a production test would also measure actual playback and viewing satisfaction.
+**Primary outcome:** qualified full-title start rate: eligible discovery sessions with at least two minutes of actual full-title playback, divided by all eligible discovery sessions. Randomize by user and compare all eligible sessions, not only Mix users. An illustrative target is +10% relative lift (20% to 22%); this is a planning assumption, not a measured result. In this prototype, title selection remains only a proxy.
 
-**Supporting measures:** preview-to-title selection rate, discovery abandonment, perceived decision effort, and discovery outside familiar titles.
+**Supporting measures:** entry CTR (sessions clicking Mix / sessions with a visible Mix impression), preview-to-title selection rate, median time to full-title playback, discovery abandonment, and viewing satisfaction. Illustrative diagnostic targets are entry CTR ≥15% and median selection time −15%; calibrate against baseline. Predefine sample size and experiment duration; evaluate confidence intervals and guardrails before rollout.
 
 **Guardrails:** time to resume an existing show, accidental selections, unwanted autoplay/audio, spoiler complaints, accessibility, and satisfaction after playback. Preview watch time alone would not define success.
 
@@ -91,4 +91,4 @@ Open `http://localhost:4173` to run locally. GitHub Pages publishes the reposito
 
 ---
 
-**中文简介**：Your Mix 是一个流媒体内容发现原型，探索如何通过自动片段预览、清晰的推荐理由和连贯的场景切换，降低用户“决定看什么”的负担。项目体现了从问题定义、产品取舍到交互迭代与 AI 辅助开发的实践；目前推荐数据为演示设定，效果仍需用户研究和实验验证。
+**中文简介**：Your Mix 是一个流媒体内容发现原型，探索如何通过点击播放的片段预览、清晰的推荐理由和连贯的场景切换，降低用户“决定看什么”的负担。项目体现了从问题定义、产品取舍到交互迭代与 AI 辅助开发的实践；目前推荐数据为演示设定，效果仍需用户研究和实验验证。
